@@ -1,9 +1,9 @@
-import Image from 'next/image'
+import { Hero } from "@/components"
 
 const Home = () => {
   return (
     <main className="overflow-hidden">
-     
+     <Hero />
     </main>
   )
 }
