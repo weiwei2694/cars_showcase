@@ -1,6 +1,6 @@
 import { Hero, SearchBar, CustomFilter } from "@/components"
 
-const Home = () => {
+const Home = async () => {
   return (
     <main className="overflow-hidden">
      <Hero />
