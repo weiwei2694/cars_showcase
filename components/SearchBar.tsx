@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation"
 import Image from "next/image";
 
 const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
-  <button type="button" className={`-ml-3 z-10 ${otherClasses}`}>
+  <button type="submit" className={`-ml-3 z-10 ${otherClasses}`}>
     <Image
       src="/magnifying-glass.svg"
       alt="magnifying glass"
@@ -22,6 +22,7 @@ const SearchBar = () => {
   const router = useRouter()
 
   const [manufacturer, setManufacturer] = useState("");
+
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
