@@ -1,7 +1,7 @@
 import { CarProps, FilterProps } from "@/types";
 
 export async function fetchCars(filters: FilterProps) {
-  const { manufacturer, year, model, limit, fuel }  = filters;
+  const { manufacturer, year, model, limit, fuel } = filters;
   
   const headers = {
     "X-RapidAPI-Key": "271e912436mshaa83cc2a895539bp11d1b8jsn0e37a8fa637b",
@@ -19,7 +19,6 @@ export async function fetchCars(filters: FilterProps) {
     );
   } else {
     response = await fetch(
-      // `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${manufacturer}&year=${year}&model=${model}&limit=${limit}&fuel_type=${fuel}`,
       'https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=bmw',
       {
         headers,
@@ -45,16 +44,6 @@ export const calculateCarRent = (city_mpg: number, year: number) => {
 
   return rentalRatePerDay.toFixed(0);
 };
-
-export const updateSearchParams = (type: string, value: string) => {
-  const searchParams = new URLSearchParams(window.location.search);
-
-  searchParams.set(type, value)
-
-  const newPathName = `${window.location.pathname}?${searchParams.toString()}`
-
-  return newPathName
-}
 
 // export const generateCarImageUrl = (car: CarProps, angle?: string) => {
 //   const url = new URL("https://cdn.imagin.studio/getimage");
