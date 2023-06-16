@@ -5,7 +5,7 @@ import { CustomButton } from "@/components";
 const ShowMore = ({ pageNumber, isNext, setLimit }: ShowMoreProps) => {
   const handleSetLimit = () => {
     const newLimit = (pageNumber + 1) * 10;
-    setLimit(newLimit.toString());
+    setLimit(newLimit);
   };
 
   return (
